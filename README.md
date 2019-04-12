@@ -1,0 +1,2 @@
+# PrizeArena
+PrizeArena Minecraft Plugin

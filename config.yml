@@ -1,0 +1,78 @@
+# PrizeArena Configuration File
+# Developed by bluecreeper111
+
+# - Message Prefix - 
+# Define the prefix for all messages in the plugin.
+prefix: '&e&l[PrizeArena]'
+
+# - Arena Configuration -
+# Here, define most things related to arenas.
+arenas:
+  # Put the arena name on top.
+  # NOTE: This arena does not actually exist, this is a configuration example.
+  examplearena:
+    # The time inbetween PrizeArenas (in seconds).
+    time-between: 240
+    # The message sent to all players when the arena starts.
+    startMessage: '&6May the odds ever be in your favour.'
+    # The message sent to a player who dies in the arena.
+    dieMessage: '&6Better luck next time!'
+    # The message broadcasted when the arena is completed
+    # %player% represents the player who won the arena
+    # %arena% represents the arena the player has won
+    endMessage: '&e%player% &6has won the PrizeArena &e%arena%&6!'
+    # The time after the arena starts, that PvP will be enabled (in seconds).
+    time-to-enable-pvp: 10
+    # The time that the arena runs, until removing players and calling it a tie if nobody is killed (in seconds).
+    time-to-stop: 240
+    
+# Everything but items for kits can be configured here
+# To add items to the kit, use /pakit setitems <kit>
+kits:
+  example:
+    # Name displayed in the GUI selector
+    displayname: '&8Example Kit'
+    # The item that is displayed in the GUI to select the kit
+    # Format is [<Bukkit Item ID>, <Amount>, (optional)<Item Data Tag>]
+    # For bukkit item ids look here:
+    # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+    # REMEMBER: Case Sensitive
+    displayitem: LEATHER_CHESTPLATE, 1
+    # Make this 0 to make the kit free
+    cost: 0
+    # Only enable this for one kit, given to player by default
+    # NOTE: Default must be set for one kit, otherwise you will run into problems
+    # NOTE: Default kit MUST be free
+    default: true
+
+# All rewards can be configured here
+rewards:
+  # Reward name here
+  example:
+    # Specify the type of reward here. The 2 different reward types are ITEM, and COMMAND
+    type: ITEM
+    # If the type of the reward is ITEM, please fill out the following parameters:
+    # (Uses Bukkit Item IDs, look here:)
+    # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+    item: diamond
+    # Amount of the item specified above
+    amount: 3
+    # Extra item data (Such as potion type etc) set to -1 to disable
+    item-data: -1
+    # Percentage that reward is given (Out of 100)
+    # IMPORTANT NOTE: Percentages for rewards MUST all equal to 100.
+    percentage: 50
+  
+  # The following is an example for a reward of the COMMAND type
+  example2:
+    type: COMMAND
+    # The following are the commands executed (from console)
+    # Don't in include the "/"
+    # %player% is the player who won the reward
+    execute:
+    - give %player% diamond 3
+    # Percentage that reward is given (Out of 100)
+    # IMPORTANT NOTE: Percentages for rewards MUST all equal to 100.
+    percentage: 50
+    
+    

@@ -1,0 +1,27 @@
+main: com.bluecreeper111.prizearena.Main
+author: bluecreeper111
+name: PrizeArena
+version: 1.0
+description: PrizeArena plugin developed by bluecreeper111.
+api-version: 1.13
+commands:
+  prizearena:
+    description: Plugin information and reload.
+    usage: /<command>
+    aliases: [parena, pa]
+  arena:
+    description: Manage all arenas.
+    usage: /<command>
+    aliases: [arenacreate, arenadelete, ar, arcreate, ardelete, arsetspawn, arlist, argui, archecklist]
+  prizejoin:
+    description: Join a PrizeArena.
+    usage: /<command>
+    aliases: [pajoin, joinpa, arjoin, arenajoin, joinar]
+  prizeleave:
+    description: Leave a PrizeArena.
+    usage: /<command>
+    aliases: [paleave, arleave, leavepa, leavear, arenaleave]
+  pakit:
+    description: Manage kits.
+    usage: /<command>
+    aliases: arkit
